@@ -67,7 +67,7 @@ const styles = StyleSheet.create({
   },
   helpContainer: {
     marginTop: 15,
-    marginHorizontal: 20,
+    marginHorizontal: 40,
     alignItems: 'center',
   },
   helpLink: {

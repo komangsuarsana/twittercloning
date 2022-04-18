@@ -19,17 +19,41 @@ export type RootStackParamList = {
   NotFound: undefined;
 };
 
+export type UserType = {
+  id: string,
+  name: string,
+  username: string,
+  image?: string,
+}
+
+export type TweetType = {
+  id: string,
+  createdAt: string,
+  user: UserType,
+  content: string,
+  image?: string,
+  numberOfComments?: number,
+  numberOfRetweet?: number,
+  numberOfLikes?: number,
+}
+
 export type RootStackScreenProps<Screen extends keyof RootStackParamList> = NativeStackScreenProps<
   RootStackParamList,
   Screen
 >;
 
 export type RootTabParamList = {
-  TabOne: undefined;
-  TabTwo: undefined;
+  Home: undefined;
+  Search: undefined;
+  Notifications: undefined;
+  Messages: undefined;
+
+
 };
+
 
 export type RootTabScreenProps<Screen extends keyof RootTabParamList> = CompositeScreenProps<
   BottomTabScreenProps<RootTabParamList, Screen>,
   NativeStackScreenProps<RootStackParamList>
 >;
+
